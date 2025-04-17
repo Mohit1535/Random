@@ -48,31 +48,107 @@ export default function Contact() {
           </div>
         </form>
       </div>
-<div className="footer">
-        <h2>Quick Links</h2>
-        <ul className="footer-links">
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li><Link to="/service">Our Services</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
-        </ul>
-      </div>
-
       <div className="footer">
-        <h2>Get Connected</h2>
-        <ul className="footer-links">
-          <li>
-            <span className="material-symbols-outlined">location_on</span>Sundigo tower, Gomti Nagar, Uttar Pradesh
-          </li>
-          <li>
-            <span className="material-symbols-outlined">phone_in_talk</span>+91 8177004441
-          </li>
-          <li>
-            <span className="material-symbols-outlined">language</span>
-            <a href="https://www.sundigosolar.com">www.sundigosolar.com</a>
-          </li>
-        </ul>
-      </div>
+  <div className="footer-section">
+    <h2>Quick Links</h2>
+    <ul className="footer-links">
+      <li><Link to="/about">About Us</Link></li>
+      <li><Link to="/contact">Contact Us</Link></li>
+      <li><Link to="/service">Our Services</Link></li>
+      <li><Link to="/gallery">Gallery</Link></li>
+    </ul>
+  </div>
+
+  <div className="footer-section">
+    <h2>Get Connected</h2>
+    <ul className="footer-links">
+      <li>
+        <span className="material-symbols-outlined">location_on</span>
+        Sundigo tower, Gomti Nagar, Uttar Pradesh
+      </li>
+      <li>
+        <span className="material-symbols-outlined">phone_in_talk</span>
+        +91 8177004441
+      </li>
+      <li>
+        <span className="material-symbols-outlined">language</span>
+        <a href="https://www.sundigosolar.com">www.sundigosolar.com</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  {`
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px;
+      background: linear-gradient(135deg, #222, #555);
+      color: white;
+      flex-wrap: wrap;
+    }
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin: 10px;
+      text-align: center;
+    }
+    .footer-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00a0a0;
+      display: inline-block;
+      padding-bottom: 5px;
+      color: #00a0a0;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-links li {
+      margin: 10px 0;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-links li span {
+      margin-right: 8px;
+      color: #00a0a0;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: #00a0a0;
+    }
+    @media (max-width: 768px) {
+      .footer {
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-section {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .footer-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .footer-links li {
+        font-size: 0.9rem;
+      }
+      .footer-section h2 {
+        font-size: 1.2rem;
+      }
+    }
+  `}
+</style>
     </>
   );
 }

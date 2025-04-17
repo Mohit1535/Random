@@ -8,7 +8,7 @@ export default function Navbar() {
         {/* Navbar Brand with Style */}
         <Link className="navbar-brand text-light fw-bold d-flex align-items-center" to="/sewa" style={{ fontSize: "1.8rem", letterSpacing: "1px" }}>
           <img src="/p8.jpeg" alt="Logo" style={{ width : "50px", height: "60px",borderRadius:"10px", marginRight: "10px" }} /> {/* Add a logo if available */}
-          <span style={{ color: "#FFD700", textShadow: "2px 2px 5px rgba(255, 215, 0, 0.5)" }}>SUNdigo Sewa Samiti</span>
+          <span style={{ color: "#FFD700", textShadow: "2px 2px 5px rgba(255, 215, 0, 0.5)",fontSize:"1.2rem" }}>SUNdigo Sewa Samiti</span>
         </Link>
 
         {/* Menu Toggle Button */}

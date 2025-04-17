@@ -22,15 +22,73 @@ export default function About() {
       </div>
 
       {/* Counter Section */}
-      <div className="counter-card" style={{ width: "5000rem" }}>
-        <div className="card-content">
-          <p className="card-title" style={{ fontSize: "1rem" }}>
-            Welcome to SUNdigo Sewa Samiti, a beacon of hope and catalyst for change in our global community. At SUNdigo Sewa Samiti, our story is one of passion, purpose, and commitment to making a difference. What began as a small venture has evolved into a company deeply rooted in the belief that business success should go hand in hand with social responsibility.
-            From day one, we've been guided by a set of core values that shape everything we do. Sustainability is at the heart of our business model, and we're proud to lead by example in reducing waste, conserving resources, and embracing renewable energy. Through this, we aim to transparently communicate our CSR initiatives, achievements, and challenges.
-            We acknowledge that the journey towards sustainability is ongoing, and we remain steadfast in our pursuit of continuous improvement. Join us as we continue to innovate, inspire, and make a difference – one step at a time.
-          </p>
-        </div>
-      </div>
+      Here’s how you can implement a left-to-right motion entrance for the "About Us Organization" block. The animation slides the block in from the left when it enters the viewport:
+<div className="about animate-about " style={{backgroundColor:"yellowgreen"}}>
+  <h2>About the Organization</h2>
+  <p>
+  Welcome to <strong>SUNdigo Sewa Samiti</strong>, a beacon of hope and catalyst for change in our global community. At SUNdigo Sewa Samiti, our story is one of passion, purpose, and commitment to making a difference. What began as a small venture has evolved into a company deeply rooted in the belief that business success should go hand in hand with social responsibility.
+  </p>
+</div>
+
+<style>
+  {`
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    .about {
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 90%;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    .animate-about {
+      animation: slideInLeft 1.5s ease-out forwards;
+    }
+    .about h2 {
+      font-size: 2rem;
+      color: #0049B7;
+      margin-bottom: 20px;
+    }
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    @media (max-width: 768px) {
+      .about {
+        padding: 20px;
+      }
+      .about h2 {
+        font-size: 1.8rem;
+      }
+      .about p {
+        font-size: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .about h2 {
+        font-size: 1.5rem;
+      }
+      .about p {
+        font-size: 0.9rem;
+      }
+    }
+  `}
+</style>
+
+
 
       {/* Board of Trusties Section */}
       <div className="card text-bg-success mb-3" style={{ fontSize: "1.5rem" }}>
@@ -156,32 +214,109 @@ export default function About() {
 </div>
 
 
-      {/* Footer Section */}
-      <div className="footer">
-        <h2>Quick Links</h2>
-        <ul className="footer-links">
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li><Link to="/service">Our Services</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
-        </ul>
-      </div>
+   
 
       <div className="footer">
-        <h2>Get Connected</h2>
-        <ul className="footer-links">
-          <li>
-            <span className="material-symbols-outlined">location_on</span>Sundigo tower, Gomti Nagar, Uttar Pradesh
-          </li>
-          <li>
-            <span className="material-symbols-outlined">phone_in_talk</span>+91 8177004441
-          </li>
-          <li>
-            <span className="material-symbols-outlined">language</span>
-            <a href="https://www.sundigosolar.com">www.sundigosolar.com</a>
-          </li>
-        </ul>
-      </div>
+  <div className="footer-section">
+    <h2>Quick Links</h2>
+    <ul className="footer-links">
+      <li><Link to="/about">About Us</Link></li>
+      <li><Link to="/contact">Contact Us</Link></li>
+      <li><Link to="/service">Our Services</Link></li>
+      <li><Link to="/gallery">Gallery</Link></li>
+    </ul>
+  </div>
+
+  <div className="footer-section">
+    <h2>Get Connected</h2>
+    <ul className="footer-links">
+      <li>
+        <span className="material-symbols-outlined">location_on</span>
+        Sundigo tower, Gomti Nagar, Uttar Pradesh
+      </li>
+      <li>
+        <span className="material-symbols-outlined">phone_in_talk</span>
+        +91 8177004441
+      </li>
+      <li>
+        <span className="material-symbols-outlined">language</span>
+        <a href="https://www.sundigosolar.com">www.sundigosolar.com</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  {`
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px;
+      background: linear-gradient(135deg, #222, #555);
+      color: white;
+      flex-wrap: wrap;
+    }
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin: 10px;
+      text-align: center;
+    }
+    .footer-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00a0a0;
+      display: inline-block;
+      padding-bottom: 5px;
+      color: #00a0a0;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-links li {
+      margin: 10px 0;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-links li span {
+      margin-right: 8px;
+      color: #00a0a0;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: #00a0a0;
+    }
+    @media (max-width: 768px) {
+      .footer {
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-section {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .footer-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .footer-links li {
+        font-size: 0.9rem;
+      }
+      .footer-section h2 {
+        font-size: 1.2rem;
+      }
+    }
+  `}
+</style>
     </>
   );
 }
