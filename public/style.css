@@ -1,249 +1,145 @@
-body{
-    margin:0px;
-    background-color: rgb(32, 32, 32);
+body {
+  margin: 0;
+  background-color: rgb(32, 32, 32);
+  font-family: Arial, sans-serif;
 }
 .home {
-    background-color: rgb(70, 60, 60); /* Background color */
-    color: rgb(0, 0, 0); /* Text color for visibility */
-    padding: 15px;
-    height:250x;
-    text-align: center;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  padding: 50px 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.carousel {
+  max-width: 80%;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: slideInRight 1s ease-out;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.counter-card {
+  background-color: #ffc107;
+  color: #000;
+  text-align: center;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+.card-content {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.counter {
+  font-size: 4rem;
+  color: red;
+  font-weight: bold;
+}
+.program-btn {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #d9534f;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+  text-align: center;
+}
+.program-btn:hover {
+  background-color: #c9302c;
+}
+.footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  display: inline;
+  margin: 0 15px;
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: darkgray lightgray;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 4px;
+}
+body::-webkit-scrollbar-track {
+  background-color: lightgray;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  /* General styles for the home section */
-.home {
-    text-align: center;
-    background-color: #000000; /* Dark background */
-    color: white;
-    padding: 50px 20px;
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-  
-  /* Carousel container */
-  .carousel {
-    max-width: 80%; /* Limits the width */
-    margin: 30px auto; /* Centers the carousel */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow:  rgba(16, 255, 127, 0.2);
-  }
-  
-  /* Carousel images */
-  .carousel-inner img {
-    height: 500px; /* Set height */
-    object-fit: cover; /* Ensures image fits properly */
-  }
-  
-  /* Customizing the carousel control buttons */
-  .carousel-control-prev,
-  .carousel-control-next {
-    filter: invert(100%); /* Makes arrows visible on dark images */
-    opacity: 0.7;
-  }
-  
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
+  to {
+    transform: translateX(0);
     opacity: 1;
   }
-  
-  /* Indicators styling */
-  .carousel-indicators button {
-    background-color: rgb(38, 38, 38);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 5px;
-  }
-  
-  .carousel-indicators .active {
-    background-color: #ffcc00; /* Highlight active indicator */
-  }
-  
-  .home {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  /* Styling for counter card */
-  .counter-card {
-    background-color: #ffc107;
-    color: #000;
-    text-align: center;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    font-size: 2rem;
-  }
-  
-  .card-content {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-  .counter {
-    font-size: 4rem;
-    color: red;
-    font-weight: bold;
-  }
-  
-  /* Button styling */
-  .program-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #d9534f;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  
-  .program-btn:hover {
-    background-color: #c9302c;
-  }
-  .program-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff0800;
-    text-decoration: none;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-    max-width: 700px;
-    text-align: center;
-    margin: auto;
-  }
-  
-  .program-btn:hover {
-    background-color: #63c92c;
-  }
-/* Footer Styling */
-.footer {
-    background-color: #222;
-    padding: 20px;
-    text-align: center;
-    color: white;
-  }
-  
-  .footer-links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-links li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Counter Card */
-  .counter-card {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffcc00;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 500px;
-  }
-  
-  .counter {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-  /* Program Button */
-  .program-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .program-btn:hover {
-    background-color: #0056b3;
-  }
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  .counter-card {
-    animation: slideInFromLeft 1s ease-in-out;
-  }
-  /* Enable vertical scrolling for the whole page */
-html, body {
-    height: 100%;
-    overflow-y: auto; /* Enables vertical scrollbar */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: darkgray lightgray; /* Custom scrollbar color */
-  }
-  
-  /* Custom scrollbar styling for Chrome, Edge, Safari */
-  body::-webkit-scrollbar {
-    width: 8px; /* Adjust the width of the scrollbar */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: darkgray; /* Color of the scrollbar thumb */
-    border-radius: 4px; /* Rounded edges */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background-color: lightgray; /* Background color of scrollbar track */
-  }
-  @keyframes slideInRight {
+}
+@keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(100%); /* Start from the right */
+    transform: translateX(100%);
   }
   to {
     opacity: 1;
-    transform: translateX(0); /* End at the original position */
-  }
-}
-
-.carousel {
-  animation: slideInRight 1s ease-out; /* Apply animation */
-}
-@media (max-width: 768px) {
-  .header {
-    font-size: 2rem; /* Adjust for smaller screens */
-  }
-  .card-text {
-    font-size: 1rem; /* Make text easier to read */
+    transform: translateX(0);
   }
 }
 @media (max-width: 768px) {
-  .header {
-    font-size: 2rem; /* Reduce font size for smaller screens */
+  .home {
+    font-size: 2rem;
   }
-  .card-text {
-    font-size: 1rem; /* Adjust text size for smaller devices */
+  .counter-card {
+    max-width: 600px;
+    font-size: 1.5rem;
+  }
+  .program-btn {
+    font-size: 1.2rem;
+    padding: 8px 15px;
   }
 }
-
+@media (max-width: 480px) {
+  .home {
+    font-size: 1.8rem;
+  }
+  .counter {
+    font-size: 2.5rem;
+  }
+  .program-btn {
+    font-size: 1.2rem;
+  }
+}
