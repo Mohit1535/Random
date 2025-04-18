@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Corrected image array
 const images = [
   "/p1.jpeg", "/p2.jpeg", "/p3.jpeg", "/p4.JPG", "/p5.JPG", "/p6.JPG",
-  "/p12.JPG", // fixed case from .jpeg to .JPG
+  "/P12.jpeg", // fixed case from .jpeg to .JPG
   "/p13.JPG", "/p14.JPG", "/p15.jpg", "/p16.jpeg", "/p17.JPG",
   "/p18.JPG", "/p19.jpeg", "/p20.jpg", "/p21.jpg", "/p22.jpg", "/p23.jpg", "/p24.jpg", "/p25.JPG"
 ];
