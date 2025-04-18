@@ -137,7 +137,7 @@ export default function Service() {
 
       {[
         { title: "Cloth Donation Camp", bg: "#0049B7", img: "/p4.jpg", text: "Join us at SUNdigo Sewa Samiti's Cloth Donation Camp!..." },
-        { title: "Blood Donation Camp", bg: "#A28089", img: "/P12.jpg", text: "Your small act of kindness can make a big difference!..." },
+        { title: "Blood Donation Camp", bg: "#A28089", img: "/P12.jpeg", text: "Your small act of kindness can make a big difference!..." },
         { title: "Plantation", bg: "#0049B7", img: "/p13.jpg", text: "Be a part of our plantation drive and help create a cleaner environment!" },
       ].map((service, index) => (
         <section key={index}>
