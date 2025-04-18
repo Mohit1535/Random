@@ -30,7 +30,7 @@ export default function Home() {
           <h5 className="card-title">Served Over</h5>
           <span className="counter">{count}</span>
           <h5 className="card-title">In Lucknow City</h5>
-          <Link to="/sewa" className="program-btn" target="self">View Our Program</Link>
+          <Link to="/service" className="program-btn" target="self">View Our Program</Link>
         </div>
       </div>
       <div className="card text-bg-success mb-3" style={{ fontSize: "1.5rem" }}>
